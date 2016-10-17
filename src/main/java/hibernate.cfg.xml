@@ -1,0 +1,18 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-configuration PUBLIC "-//Hibernate/Hibernate Configuration DTD 3.0//EN"
+                                         "http://www.hibernate.org/dtd/hibernate-configuration-3.0.dtd">
+<hibernate-configuration>
+ <session-factory>
+  <property name="hibernate.dialect">org.hibernate.dialect.Oracle10gDialect</property>
+  <property name="hibernate.default_schema">Bert</property>
+  <property name="hibernate.connection.username">Bert</property>
+  <property name="hibernate.connection.password">circuit1</property>
+  <property name="hibernate.connection.url">jdbc:oracle:thin:@localhost:1521:xe</property>
+<!--   <property name="hibernate.connection.url">jdbc:oracle:thin:@cisc181.ci3wacsy5j84.us-east-1.rds.amazonaws.com:1521:ORCL</property> -->
+  <property name="show_sql">true</property>
+  <property name="format_sql">true</property>
+  <property name="hibernate.hbm2ddl.auto">update</property>
+  <mapping resource="MainPackage/Employee.hbm.xml"/>
+  <mapping resource="MainPackage/DBUser.hbm.xml"/>
+ </session-factory>
+</hibernate-configuration>
